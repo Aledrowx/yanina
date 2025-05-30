@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradiciones Peruanas</title>
+  <link href="estilos.css" rel="stylesheet">
+  
+</head>
+<body>
+<header class="banner-superior">
+  <div class="logo">Tradiciones Peruanas</div>
+  <nav class="menu-navegacion">
+    <a href="file:///C:/Users/Alu_torre1/Desktop/entregable%201/index.html" class="activo">INICIO</a>
+    <a href="file:///C:/Users/Alu_torre1/Desktop/entregable%201/costa.html">COSTA</a>
+    <a href="file:///C:/Users/Alu_torre1/Desktop/entregable%201/sierra.html">SIERRA</a>
+    <a href="file:///C:/Users/Alu_torre1/Desktop/entregable%201/selva.html">SELVA</a>
+    <a href="#">CONTACTO</a>
+    <a href="Reserva con nosotros" class="btn-reservas">RESERVAS</a>
+  </nav>
+</header>
+
+
+<header>
+  <h2>Tradiciones</h2>
+  <h1>Peruanas</h1>
+</header>
+
+<section class="section">
+  <div class="grid">
+    <div class="card">
+      <img src="imagen/ceviche.png" alt="Ceviche">
+      <p>Ceviche</p>
+    </div>
+    <div class="card">
+      <img src="imagen/seco.jpg" alt="Seco de Cordero">
+      <p>Seco de Cordero</p>
+    </div>
+    <div class="card">
+      <img src="imagen/pacha.jpg" alt="Pachamanca">
+      <p>Pachamanca</p>
+    </div>
+    <div class="card">
+      <img src="imagen/selva.jpg" alt="Tacacho y Cecina">
+      <p>Tacacho y Cecina</p>
+    </div>
+    <div class="card">
+      <img src="imagen/lomo.jpg" alt="Lomo Saltado">
+      <p>Lomo Saltado</p>
+    </div>
+  </div>
+</section>
+<center>
+ <div class="carrusel-circular">
+    <div class="carrusel" id="carrusel">
+      <img src="https://img.goraymi.com/2018/06/28/de33fb1e05d84635bfac495e6322f0e1_xl.jpg" alt="1">
+      <img src="https://ojo.pe/resizer/Zqy1n-YEzlhc5ETcM-Y4GN0-Yw8=/1200x675/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IFL3P7ROBE75O6GMR3MSIICQU.jpg" alt="2">
+      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/11aaa1153149245.Y3JvcCw0Mzg4LDM0MzIsMCw0Nzc.jpg" alt="3">
+      <img src="https://ojo.pe/resizer/Zqy1n-YEzlhc5ETcM-Y4GN0-Yw8=/1200x675/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IFL3P7ROBE75O6GMR3MSIICQU.jpg" alt="4">
+      <img src="https://www.expresoselva.com/_next/static/media/botlogo-home.7cb73cd8.png" alt="5">
+      <img src="https://ojo.pe/resizer/Zqy1n-YEzlhc5ETcM-Y4GN0-Yw8=/1200x675/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IFL3P7ROBE75O6GMR3MSIICQU.jpg" alt="6">
+    </div>
+  </div>
+
+  <script>
+    const imagenes = document.querySelectorAll(".carrusel img");
+    const total = imagenes.length;
+
+    imagenes.forEach((img, i) => {
+      const angulo = (360 / total) * i;
+      img.style.transform = `rotateY(${angulo}deg) translateZ(300px)`;
+    });
+  </script>
+</center>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+  <section class="chef" style="flex: 1;">
+    <div class="texto">
+      <h3>Gaston Acurio</h3>
+      <p>Gaston Acurio es un chef peruano reconocido por ser embajador de la gastronomia peruana en el mundo.
+      Fundador de Astrid & Gaston, ha impulsado el valor de los ingredientes nativos y las cocinas regionales.
+      Su trabajo ha transformado la cocina peruana en un simbolo de identidad y orgullo cultural.</p>
+    </div>
+  </section>
+
+
+<div class="card-flip">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="imagen/gaston2.jpg" alt="Gaston 2">
+    </div>
+    <div class="card-back">
+      <img src="imagen/gaston1.jpg" alt="Gaston 1">
+    </div>
+  </div>
+</div>
+
+<section class="reserva" style="flex: 1; font-size: 14px;">
+  <h2 style="font-size: 18px;">Reserva con nosotros</h2>
+  <form action="#" method="post" style="display: flex; flex-direction: column; gap: 10px;">
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+      <label for="fecha" style="width: 120px;">Fecha</label>
+      <input type="date" id="fecha" name="fecha" required style="flex: 1; padding: 4px;">
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+      <label for="personas" style="width: 120px;">Personas</label>
+      <select id="personas" name="personas" required style="flex: 1; padding: 4px;">
+        <option value="">Selecciona</option>
+        <option value="1">1 persona</option>
+        <option value="2">2 personas</option>
+        <option value="3">3 personas</option>
+        <option value="4">4 personas</option>
+        <option value="5+">5 o más</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+      <label for="horario" style="width: 120px;">Horario</label>
+      <select id="horario" name="horario" required style="flex: 1; padding: 4px;">
+        <option value="">Selecciona</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="13:00">1:00 PM</option>
+        <option value="14:00">2:00 PM</option>
+        <option value="18:00">6:00 PM</option>
+        <option value="20:00">8:00 PM</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+      <label for="nombre" style="width: 120px;">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required style="flex: 1; padding: 4px;">
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+      <label for="correo" style="width: 120px;">Correo</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required style="flex: 1; padding: 4px;">
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+      <label for="telefono" style="width: 120px;">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="999999999" pattern="[0-9]{9,10}" required style="flex: 1; padding: 4px;">
+    </div>
+
+    <div class="form-group" style="display: flex; align-items: flex-start; gap: 8px;">
+      <label for="comentarios" style="width: 120px;">Comentarios</label>
+      <textarea id="comentarios" name="comentarios" placeholder="¿Algo más?" rows="2" style="flex: 1; padding: 4px;"></textarea>
+    </div>
+
+    <button type="submit" class="btn-reservar" style="margin-left: 120px; padding: 6px 12px;">Reservar</button>
+
+  </form>
+</section>
+
+
+</div>
+
+
+<footer>
+  <p>📍Calle Sideral Carrion</p>
+  <p>📞999 999 999</p>
+  <p>📧tradper@gmail.com</p>
+  <p>📸Instagram: <a href="#">@tradper</a> / <a href="#">@chefacurio</a></p>
+</footer>
+</div>
+<div class="cookie-container" id="cookie-banner" style="
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+">
+  <p style="margin: 0 0 10px 0; color: #333;">Usamos cookies esenciales y analíticas para ofrecerte la mejor experiencia en nuestro sitio gastronómico. Al aceptar, nos ayudas a mejorar nuestro servicio.</p>
+  <div style="display: inline-block;">
+    <button id="accept-btn" style="
+        padding: 5px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        margin-right: 5px;
+    ">Aceptar</button>
+    <button id="deny-btn" style="
+        padding: 5px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #f44336;
+        color: white;
+    ">Denegar</button>
+  </div>
+</div>
+<script>
+    function setCookie(nombre, valor, dias) {
+        let fecha = new Date();
+        fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000));
+        document.cookie = nombre + "=" + valor + ";expires=" + fecha.toUTCString() + ";path=/";
+    }
+
+    function getCookie(nombre) {
+        let nombreEQ = nombre + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i].trim();
+            if (c.indexOf(nombreEQ) == 0) return c.substring(nombreEQ.length, c.length);
+        }
+        return null;
+    }
+
+    window.onload = function() {
+        let cookieBanner = document.getElementById("cookie-banner");
+        if (!getCookie("cookiesAceptadas")) {
+            cookieBanner.style.display = "block";
+        }
+
+        document.getElementById("accept-btn").onclick = function() {
+            setCookie("cookiesAceptadas", "si", 30);
+            cookieBanner.style.display = "none";
+        };
+
+        document.getElementById("deny-btn").onclick = function() {
+            setCookie("cookiesAceptadas", "no", 30);
+            cookieBanner.style.display = "none";
+        };
+    };
+</script>
+
+</body>
+</html>
